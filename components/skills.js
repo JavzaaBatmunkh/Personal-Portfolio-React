@@ -1,8 +1,23 @@
 import { Icon } from "./icon";
 
  export function Skills() {
-  return (<div >
-     Skills
+  return (
+  <div style = {{paddingTop: '80px', paddingBottom: '80px' }} >
+    
+    <div class="flex items-center justify-center">
+          <div class="inline-flex items-center bg-gray-200 rounded-full px-6 py-1">
+            <div class="text-center">
+              <h2 class="text-sm font-normal">Skills</h2>
+            </div>
+          </div>
+    </div>
+        
+        <div class="text-center pt-5 pb-5 text-normal font-light">
+          <p>
+            The skills, tools and technologies that I'm really good at:
+          </p>
+        </div>
+     
      <div className="grid grid-cols-8 grid-rows-2">
       <Icon title="Javascript" pic="icon-javscript.svg"/>
       <Icon title="Typescript" pic="icon-typescript.svg"/>

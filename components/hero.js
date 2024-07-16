@@ -21,9 +21,17 @@ export function Hero() {
           <GoDotFill  className="text-green-600"/>
           Available for new projects
           </div>
+          <div className='flex inline-flex mt-10'>
+        <div><Image src="/images/GitHub-Icon.png" alt="gitHub" width={30} height={30}/></div>
+        <div><Image src="/images/Twitter Icon.png" alt="twitter" width={30} height={30}/></div>
+        <div><Image src="/images/Figma-Icon.png" alt="figma" width={30} height={30}/></div>
       </div>
-      <div>
-        <Image src="/images/Sagar.jpeg" width={280} height={280} />
+      </div>
+
+      <div className="relative z-30">
+        <div className="relative z-50"><Image src="/images/Sagar.jpeg" width={280} height={280} z-index={50} /></div>
+        <div className="bg-gray-200 w-64 h-72 absolute top-7 left-20 z-40"></div>
+
       </div>
     </div>
   );
