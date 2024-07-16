@@ -5,7 +5,7 @@ import { Links } from "./social-links";
 
 export function Hero() {
   return (
-    <div class=" md:grid grid-cols-3 py-24 gap-32 flex flex-col-reverse">
+    <div class=" md:grid grid-cols-3 py-24  flex flex-col-reverse gap-[3.4%]">
       <div className="col-span-2 text-base">
         <h1 className="text-6xl text-gray-900 dark:text-white font-bold mb-2">
           Hi, I'm Sagar 👋
@@ -26,17 +26,7 @@ export function Hero() {
         <Links />
       </div>
 
-      <div className="relative z-30">
-        <div className="relative z-50">
-          <Image
-            src="/images/Sagar.jpeg"
-            width={280}
-            height={280}
-            z-index={50}
-          />
-        </div>
-        <div className="bg-gray-200 w-64 h-72 absolute top-7 left-20 z-40"></div>
-      </div>
+      <Image src="/images/Sagar.jpeg" width={280} height={280} />
     </div>
   );
 }

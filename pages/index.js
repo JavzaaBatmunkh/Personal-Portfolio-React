@@ -11,7 +11,7 @@ import { Work } from "@/components/work";
 
 export default function Home() {
   return (
-    <main className="px-20 text-gray-600 dark:bg-slate-800 dark:text-white">
+    <main className="px-[6%] text-gray-600 dark:bg-slate-800 dark:text-white">
       <Header />
       <Hero /> 
       <About info={{picture: "/images/Pic.svg", title: "About me"}}/>

@@ -12,7 +12,7 @@ export function Skills() {
         <p>The skills, tools and technologies that I'm really good at:</p>
       </div>
 
-      <div className="grid grid-cols-8 grid-rows-2 gap-12">
+      <div className="grid md:grid-cols-8 grid-cols-3 gap-12">
         <Icon title="Javascript" pic="icon-javscript.svg" />
         <Icon title="Typescript" pic="icon-typescript.svg" />
         <Icon title="React" pic="icon-react.svg" />
