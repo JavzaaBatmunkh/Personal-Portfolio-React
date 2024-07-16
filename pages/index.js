@@ -6,12 +6,12 @@ import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { Skills } from "@/components/skills";
 import { Work } from "@/components/work";
-import longText from "@/components/longText"
+
 
 
 export default function Home() {
   return (
-    <main className="mx-20">
+    <main className="px-20 text-gray-600 dark:bg-slate-800 dark:text-white">
       <Header />
       <Hero /> 
       <About info={{picture: "/images/Pic.svg", title: "About me"}}/>
