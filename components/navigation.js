@@ -4,8 +4,6 @@ import { IoMenu } from "react-icons/io5";
 import Link from "next/link";
 import { useState } from "react";
 import { LuMoonStar } from "react-icons/lu";
-import { Navigation } from "./navigation";
-
 const navigations = [
   {
     name: "About",
@@ -25,15 +23,7 @@ const navigations = [
   },
 ];
 
-export function Header() {
-  const [open, setOpen] = useState(false);
-  function openMenu() {
-    setOpen(true);
-  }
-
-  function closeMenu() {
-    setOpen(false);
-  }
+export function Navigation() {
   const [light, setLight] = useState(true);
   function onLight() {
     setLight(true);
@@ -45,24 +35,9 @@ export function Header() {
   }
 
   return (
-    <header className="flex justify-between py-[16px] ">
+    <>
       <div className="font-semibold text-2xl">{"<SS />"}</div>
-
-      <div>
-        <div
-          className={`fixed top-0 bottom-0 w-full bg-slate-500/90  transition-all 
-            ${open ? "opacity-100 right-64" : "opacity-0 -right-full"}`}
-          onClick={closeMenu}
-        ></div>
-        <div
-          className={`fixed top-0 bottom-0  w-64 bg-white dark:bg-slate-800 dark:text-white shadow-lg text-black transition-all 
-        ${open ? "right-0 " : "-right-full"}`}
-        >
-          <Navigation />
-          <button onClick={closeMenu}>Close</button>
-        </div>
-      </div>
-      <div className="text-[16] leading-6 font-medium items-center hidden md:flex md:gap-4">
+      <div className="text-[16] leading-6 font-medium items-left flex gap-4 flex-col">
         {navigations.map((nav, index) => (
           <Link
             href={nav.link}
@@ -80,9 +55,6 @@ export function Header() {
         </button>
         <Buttons />
       </div>
-      <button className="md:hidden text-4xl" onClick={openMenu}>
-        <IoMenu />
-      </button>
-    </header>
+    </>
   );
 }

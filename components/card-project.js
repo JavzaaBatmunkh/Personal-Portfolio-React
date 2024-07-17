@@ -63,10 +63,10 @@ const projects = [
 
 export function CardProject() {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 ">
       {projects.map((project, index) => (
-        <div className="flex justify-center items-center" key={index}>
-          <div className="grid gap-x-12 grid-cols-2 justify-center rounded-xl shadow-xl">
+        <div className="flex justify-center items-center dark:bg-[#1F2937]" key={index}>
+          <div className="md:grid md:gap-x-12 md:grid-cols-2 justify-center rounded-xl shadow-xl">
             <div className="light:bg-gray-50 rounded-lg items-center justify-center pl-5 pr-5 pb-10 pt-10">
               <Image src={project.imagePath} width={600} height={600} />
             </div>

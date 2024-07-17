@@ -75,7 +75,6 @@ export function ContactMe() {
           </div>
         </div>
       </div>
-      ;
     </section>
   );
 }
