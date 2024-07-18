@@ -1,11 +1,13 @@
 import Image from "next/image";
 import { Tag } from "./tag";
+import Link from "next/link";
 export function About({ info }) {
   const { picture, title } = info;
   return (
+    <div className="bg-gray-50 dark:bg-[#111827]" id="about">
     <div
-      id="about"
-      className="light:bg-gray-50"
+      
+      className=" max-w-7xl mx-auto px-[3%]"
       style={{ paddingTop: "80px", paddingBottom: "80px" }}
     >
       <div className="flex items-center justify-center">
@@ -44,7 +46,11 @@ export function About({ info }) {
             around on twitter or on indie hacker, witnessing the journey of
             early startups or enjoying some free time. You can follow me on{" "}
             <u>Twitter</u> where I share tech-related bites and build in public,
-            or you can follow me on <u>GitHub</u>.
+            or you can follow me on{" "}
+            <Link href={"https://github.com/JavzaaBatmunkh"}>
+              <u className="font-bold">GitHub.</u>
+            </Link>
+            
           </div>
           <div className="mt-5">Finally, some quick bits about me.</div>
           <ul className="list-disc list-inside grid grid-cols-2 mt-5">
@@ -57,6 +63,7 @@ export function About({ info }) {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { LuMoonStar } from "react-icons/lu";
 import { Navigation } from "./navigation";
+import { IoMdCloseCircleOutline } from "react-icons/io";
 
 const navigations = [
   {
@@ -45,7 +46,8 @@ export function Header() {
   }
 
   return (
-    <header className="flex justify-between py-[16px] ">
+    <header className=" py-[16px] sticky top-0 bg-gray-50 dark:bg-[#1F2937] ">
+      <div className="max-w-7xl mx-auto px-[3%] flex justify-between">
       <div className="font-semibold text-2xl">{"<SS />"}</div>
 
       <div>
@@ -55,11 +57,13 @@ export function Header() {
           onClick={closeMenu}
         ></div>
         <div
-          className={`fixed top-0 bottom-0  w-64 bg-white dark:bg-slate-800 dark:text-white shadow-lg text-black transition-all 
+          className={` p-8 fixed top-0 bottom-0  w-64 bg-white dark:bg-slate-800 dark:text-white shadow-lg text-black transition-all 
         ${open ? "right-0 " : "-right-full"}`}
         >
           <Navigation />
-          <button onClick={closeMenu}>Close</button>
+          <button onClick={closeMenu} className="absolute top-8 right-8 text-2xl hover:text-orange-500 transition-colors duration-200">
+          <IoMdCloseCircleOutline />
+          </button>
         </div>
       </div>
       <div className="text-[16] leading-6 font-medium items-center hidden md:flex md:gap-4">
@@ -83,6 +87,7 @@ export function Header() {
       <button className="md:hidden text-4xl" onClick={openMenu}>
         <IoMenu />
       </button>
+      </div>
     </header>
   );
 }

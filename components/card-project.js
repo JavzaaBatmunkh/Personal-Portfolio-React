@@ -19,7 +19,7 @@ const projects = [
       "Storybook",
       "Git",
     ],
-    link: "/",
+    link: "https://snake-game-xi-ashen.vercel.app/",
   },
   {
     imagePath: "/images/Project-pic.png",
@@ -38,7 +38,7 @@ const projects = [
       "Storybook",
       "Git",
     ],
-    link: "/",
+    link: "https://to-do-list-six-blue.vercel.app/",
   },
   {
     imagePath: "/images/Project-pic.png",
@@ -57,7 +57,7 @@ const projects = [
       "Storybook",
       "Git",
     ],
-    link: "/",
+    link: "https://go-go-mn-homepage.vercel.app",
   },
 ];
 
@@ -65,33 +65,35 @@ export function CardProject() {
   return (
     <div className="flex flex-col gap-10 ">
       {projects.map((project, index) => (
-        <div className="flex justify-center items-center dark:bg-[#1F2937]" key={index}>
-          <div className="md:grid md:gap-x-12 md:grid-cols-2 justify-center rounded-xl shadow-xl">
-            <div className="light:bg-gray-50 rounded-lg items-center justify-center pl-5 pr-5 pb-10 pt-10">
-              <Image src={project.imagePath} width={600} height={600} />
+        <div
+          className={`md:flex justify-center rounded-xl shadow-xl 
+        ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
+          key={project.title}
+        >
+          <div className="bg-gray-50 dark:bg-[#111827] rounded-lg items-center justify-center pl-5 pr-5 pb-10 pt-10 md:flex-1">
+            <Image src={project.imagePath} width={600} height={600} />
+          </div>
+
+          <div className="light:bg-white items-center justify-center p-5 md:flex-1">
+            <div className="pb-10">
+              <strong>{project.title}</strong>
+            </div>
+            <div className="pr-10">{project.description}</div>
+
+            <div className="flex flex-wrap gap-2 mt-4">
+              {project.tags.map((tagName, index) => (
+                <Tag key={index} props={tagName} />
+              ))}
             </div>
 
-            <div className="light:bg-white items-center justify-center">
-              <div className="pb-10">
-                <strong>{project.title}</strong>
-              </div>
-              <div className="pr-10">{project.description}</div>
-
-              <div className="flex flex-wrap gap-2 mt-4">
-                {project.tags.map((tagName, index) => (
-                  <Tag key={index} props={tagName} />
-                ))}
-              </div>
-
-              <div className="pt-10 pb-20">
-                <Image
-                  src="/images/Icon Button.png"
-                  alt=""
-                  width={40}
-                  height={40}
-                />
-              </div>
-            </div>
+            <Link className="pt-10 pb-20" href={project.link}>
+              <Image
+                src="/images/Icon Button.png"
+                alt=""
+                width={30}
+                height={30}
+              />
+            </Link>
           </div>
         </div>
       ))}

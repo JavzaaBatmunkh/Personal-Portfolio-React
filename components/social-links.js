@@ -1,17 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+import { LuTwitter } from "react-icons/lu";
+import { LuFigma } from "react-icons/lu";
+
 
 const socialLinks = [
   {
-    imagePath: "/images/GitHub-Icon.png",
-    link: "/github",
+    imagePath: <FaGithub />,
+    link: "https://github.com/JavzaaBatmunkh",
   },
   {
-    imagePath: ("/images/Twitter Icon.png"),
+    imagePath: <LuTwitter />,
     link: "/twitter",
   },
   {
-    imagePath: ("/images/Figma-Icon.png"),
+    imagePath: <LuFigma />,
     link: "/figma",
   },
 ];
@@ -19,8 +23,8 @@ export function Links() {
   return (
     <div className="flex mt-10">
       {socialLinks.map((social, index) => (
-        <Link key={index} href={social.link}>
-          <Image src={social.imagePath} width={30} height={30} />
+        <Link key={index} href={social.link} className="text-2xl flex w-12 dark:text-white">
+          {social.imagePath}
         </Link>
       ))}
     </div>

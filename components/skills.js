@@ -3,7 +3,7 @@ import { Tag } from "./tag";
 
 export function Skills() {
   return (
-    <div style={{ paddingTop: "80px", paddingBottom: "80px" }}>
+    <div style={{ paddingTop: "80px", paddingBottom: "80px" }} className="max-w-7xl mx-auto px-[3%]">
       <div class="flex items-center justify-center">
         <Tag props="Skills"/>
       </div>

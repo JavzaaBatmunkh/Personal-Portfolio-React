@@ -35,7 +35,7 @@ const experiences = [
 export function Experience() {
   return (
     <div
-      className="light:bg-gray-50 px-[13.3%]"
+      className="bg-gray-50 dark:bg-[#111827] px-[13.3%]"
       style={{ paddingTop: "80px", paddingBottom: "80px" }}
     >
       <div className="flex items-center justify-center">

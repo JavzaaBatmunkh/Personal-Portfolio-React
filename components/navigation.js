@@ -36,8 +36,9 @@ export function Navigation() {
 
   return (
     <>
-      <div className="font-semibold text-2xl">{"<SS />"}</div>
-      <div className="text-[16] leading-6 font-medium items-left flex gap-4 flex-col">
+      <div className="font-semibold text-2xl mb-5">{"<SS />"}</div>
+      <hr/>
+      <div className="text-[16] leading-6 font-medium items-left flex gap-4 flex-col mt-4">
         {navigations.map((nav, index) => (
           <Link
             href={nav.link}
@@ -46,11 +47,14 @@ export function Navigation() {
             {nav.name}
           </Link>
         ))}
+        <hr/>
 
-        <button onClick={onLight} className={light ? "hidden" : "block"}>
+        <button onClick={onLight} className={`flex justify-between  hover:text-orange-500 transition-colors duration-200 ${light ? "hidden" : "block"}`} > 
+          Switch Theme
           <FiSun />
         </button>
-        <button onClick={offLight} className={light ? "block" : "hidden"}>
+        <button onClick={offLight} className={`flex justify-between  hover:text-orange-500 transition-colors duration-200 ${light ? "block" : "hidden"}`}>
+          Switch Theme
           <LuMoonStar />
         </button>
         <Buttons />
