@@ -1,6 +1,9 @@
-import Image from "next/image";
+
 import { Tag } from "./tag";
 import { Links } from "./social-links";
+import { MdMailOutline } from "react-icons/md";
+import { FaRegCopy } from "react-icons/fa6";
+import { FiPhoneCall } from "react-icons/fi";
 
 export function ContactMe() {
   return (
@@ -14,48 +17,24 @@ export function ContactMe() {
         <p>a developer, have a query, or simply want to connect.</p>
       </div>
 
-      <div className="flex items-center justify-center">
-        <div className="inline-flex items-center gap-4">
-          <div>
-            <Image src="/images/email-Icon.png" alt="" width={30} height={30} />
-          </div>
-          <div className="md:text-4xl text-1xl font-semibold">
-            <h1>reachsagarshah@gmail.com</h1>
-          </div>
-          <div>
-            <Image
-              src="/images/copyButton-Icon.png"
-              alt=""
-              width={30}
-              height={30}
-            />
-          </div>
+      <div className="flex items-center justify-center mb-2">
+        <div className="inline-flex items-center gap-4 md:text-4xl text-1xl font-semibold">
+        <MdMailOutline />
+          <h1>reachsagarshah@gmail.com</h1>
+          <FaRegCopy />
         </div>
       </div>
 
       <div className="flex items-center justify-center">
-        <div className="inline-flex items-center gap-4">
-          <div>
-            <Image src="/images/Phone-Icon.png" alt="" width={30} height={30} />
-          </div>
-          <div className="md:text-4xl text-1xl font-semibold">
-            <h1>+91 8980500565</h1>
-          </div>
-          <div>
-            <Image
-              src="/images/copyButton-Icon.png"
-              alt=""
-              width={30}
-              height={30}
-            />
-          </div>
+        <div className="inline-flex items-center gap-4 md:text-4xl text-1xl font-semibold">
+          <FiPhoneCall />
+          <h1>+91 8980500565</h1>
+          <FaRegCopy />
         </div>
       </div>
 
       <div className="text-center items-center justify-center pt-10 pb-20 font-light text-sm">
-        <div>
-          <p>You may also find me on these platforms!</p>
-        </div>
+        <p>You may also find me on these platforms!</p>
         <div className="inline-flex">
           <Links />
         </div>

@@ -26,7 +26,12 @@ export function Hero() {
         <Links />
       </div>
 
-      <Image src="/images/Sagar.jpeg" width={280} height={280} className="mx-auto mb-12"/>
+      <Image
+        src="/images/Sagar.jpeg"
+        width={280}
+        height={280}
+        className="mx-auto mb-12 shadow-2xl shadow-slate-900 p-2 dark:shadow-white dark:bg-white"
+      />
     </div>
   );
 }

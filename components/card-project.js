@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Tag } from "./tag";
+import { GrShare } from "react-icons/gr";
 const projects = [
   {
     imagePath: "/images/Project-pic.png",
@@ -86,13 +87,8 @@ export function CardProject() {
               ))}
             </div>
 
-            <Link className="pt-10 pb-20" href={project.link}>
-              <Image
-                src="/images/Icon Button.png"
-                alt=""
-                width={30}
-                height={30}
-              />
+            <Link className="pt-12 pb-20 " href={project.link}>
+            <GrShare />
             </Link>
           </div>
         </div>

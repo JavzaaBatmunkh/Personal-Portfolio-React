@@ -15,7 +15,10 @@ export function About({ info }) {
       </div>
 
       <div className="md:grid md:grid-cols-2 md:gap-10 pt-10">
-        <Image src={picture} alt="" width={480} height={480} />
+        
+        <Image src={picture} alt="" width={480} height={480} className="shadow-2xl shadow-slate-900  dark:shadow-white mb-14 mx-auto md:mx-0"/>
+        
+        
 
         <div className="flex flex-col ">
           <div className="font-medium text-3xl">
