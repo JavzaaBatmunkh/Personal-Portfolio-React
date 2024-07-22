@@ -46,7 +46,7 @@ export function Header() {
   }
 
   return (
-    <header className=" py-[16px] sticky top-0 bg-gray-50 dark:bg-[#1F2937] ">
+    <header className=" py-[16px] sticky top-0 bg-gray-50 dark:bg-[#1F2937] relative z-30">
       <div className="max-w-7xl mx-auto px-[3%] flex justify-between">
       <div className="font-semibold text-2xl">{"<SS />"}</div>
 

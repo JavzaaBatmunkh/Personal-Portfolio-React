@@ -16,9 +16,24 @@ export function About({ info }) {
 
       <div className="md:grid md:grid-cols-2 md:gap-10 pt-10">
         
-        <Image src={picture} alt="" width={480} height={480} className="shadow-2xl shadow-slate-900  dark:shadow-white mb-14 mx-auto md:mx-0"/>
         
         
+        <div className="relative bg-slate-200 mx-auto w-[80%] aspect-[5/6] hidden md:block mb-14 mt-[10%]">
+        <Image
+          src={picture}
+          width={480}
+          height={480}
+          className=" w-full h-full object-cover relative bottom-[8%] left-[8%]"
+        />  
+        </div>
+        <div className="relative bg-slate-200 mx-auto w-[60%] aspect-[8/9] md:hidden mb-16 mt-10">
+        <Image
+          src={picture}
+          width={480}
+          height={480}
+          className=" w-[84%] h-full object-cover relative bottom-[7%] right-[8%] left-[8%]"
+        />
+      </div>
 
         <div className="flex flex-col ">
           <div className="font-medium text-3xl">

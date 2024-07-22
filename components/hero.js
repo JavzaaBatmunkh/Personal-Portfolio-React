@@ -25,13 +25,25 @@ export function Hero() {
         </div>
         <Links />
       </div>
-
-      <Image
-        src="/images/Sagar.jpeg"
-        width={280}
-        height={280}
-        className="mx-auto mb-12 shadow-2xl shadow-slate-900 p-2 dark:shadow-white dark:bg-white"
-      />
+      
+      <div className="relative bg-slate-200 mx-auto w-[80%] aspect-[7/8] hidden md:block ">
+        <Image
+          src="/images/Sagar.jpeg"
+          width={300}
+          height={300}
+          className=" w-full h-full object-cover relative bottom-[8%] right-[8%]"
+        />  
+      </div>
+      <div className="relative bg-slate-200 mx-auto aspect-[1/1] md:hidden mb-16">
+        <Image
+          src="/images/Sagar.jpeg"
+          width={300}
+          height={300}
+          className=" w-[84%] h-full object-cover relative bottom-[8%] right-[8%] left-[8%]"
+        />
+      </div>
+      
+      
     </div>
   );
 }
