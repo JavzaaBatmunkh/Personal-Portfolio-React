@@ -60,7 +60,7 @@ export function Header() {
           className={` p-8 fixed top-0 bottom-0  w-64 bg-white dark:bg-slate-800 dark:text-white shadow-lg text-black transition-all 
         ${open ? "right-0 " : "-right-full"}`}
         >
-          <Navigation />
+          <Navigation closeMenu={closeMenu} />
           <button onClick={closeMenu} className="absolute top-8 right-8 text-2xl hover:text-orange-500 transition-colors duration-200">
           <IoMdCloseCircleOutline />
           </button>

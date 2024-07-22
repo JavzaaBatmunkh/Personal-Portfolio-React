@@ -81,7 +81,7 @@ export function CardProject() {
             </div>
             <div className="pr-10">{project.description}</div>
 
-            <div className="flex flex-wrap gap-2 mt-4">
+            <div className="flex flex-wrap gap-2 mt-4 mb-4">
               {project.tags.map((tagName, index) => (
                 <Tag key={index} props={tagName} />
               ))}

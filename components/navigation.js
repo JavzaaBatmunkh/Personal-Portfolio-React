@@ -1,9 +1,10 @@
 import { Buttons } from "./button";
 import { FiSun } from "react-icons/fi";
-import { IoMenu } from "react-icons/io5";
+
 import Link from "next/link";
 import { useState } from "react";
 import { LuMoonStar } from "react-icons/lu";
+import { IoMdCloseCircleOutline } from "react-icons/io";
 const navigations = [
   {
     name: "About",
@@ -15,7 +16,7 @@ const navigations = [
   },
   {
     name: "Testimonials",
-    link: "/testimonials",
+    link: "#experience",
   },
   {
     name: "Contact",
@@ -23,7 +24,8 @@ const navigations = [
   },
 ];
 
-export function Navigation() {
+export function Navigation({closeMenu}) {
+
   const [light, setLight] = useState(true);
   function onLight() {
     setLight(true);
@@ -37,19 +39,20 @@ export function Navigation() {
   return (
     <>
       <div className="font-semibold text-2xl mb-5">{"<SS />"}</div>
-      <hr/>
+      <hr />
       <div className="text-[16] leading-6 font-medium items-left flex gap-4 flex-col mt-4">
         {navigations.map((nav, index) => (
-          <Link
+          <Link key={index}
             href={nav.link}
+            onClick={closeMenu}
             className="hover:text-orange-500 transition-colors duration-200"
           >
             {nav.name}
           </Link>
         ))}
-        <hr/>
+        <hr />
 
-        <button onClick={onLight} className={`flex justify-between  hover:text-orange-500 transition-colors duration-200 ${light ? "hidden" : "block"}`} > 
+        <button onClick={onLight} className={`flex justify-between  hover:text-orange-500 transition-colors duration-200 ${light ? "hidden" : "block"}`} >
           Switch Theme
           <FiSun />
         </button>
