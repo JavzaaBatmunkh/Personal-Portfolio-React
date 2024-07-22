@@ -18,7 +18,7 @@ const navigations = [
   },
   {
     name: "Testimonials",
-    link: "/testimonials",
+    link: "#experience",
   },
   {
     name: "Contact",
