@@ -14,7 +14,7 @@ export default function Home() {
     <main className=" text-gray-600 dark:bg-[#030712] dark:text-white">
       <Header />
       <Hero /> 
-      <About info={{picture: "/images/Pic.svg", title: "About me"}}/>
+      <About/>
       <Skills/>
       <Experience/>
       <Work/>

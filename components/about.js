@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Tag } from "./tag";
 import Link from "next/link";
-export function About({ info }) {
-  const { picture, title } = info;
+export function About() {
+  
   return (
     <div className="bg-gray-50 dark:bg-[#111827]" id="about">
     <div
@@ -20,18 +20,18 @@ export function About({ info }) {
         
         <div className="relative bg-slate-200 w-[80%] aspect-[5/6] hidden md:block mb-14 mt-[10%]">
         <Image
-          src={picture}
+          src="/images/about.png"
           width={480}
           height={480}
-          className=" w-full h-full object-cover relative bottom-[8%] left-[8%]"
+          className=" w-full h-full object-cover relative bottom-[7.5%] left-[9%]"
         />  
         </div>
         <div className="relative bg-slate-200 mx-auto w-[60%] aspect-[8/9] md:hidden mb-16 mt-10">
         <Image
-          src={picture}
+          src="/images/about.png"
           width={480}
           height={480}
-          className=" w-[84%] h-full object-cover relative bottom-[7%] right-[8%] left-[8%]"
+          className=" w-[94%] h-full object-cover relative bottom-[3%] right-[3%] left-[3%]"
         />
       </div>
 

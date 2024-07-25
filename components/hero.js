@@ -28,18 +28,18 @@ export function Hero() {
       
       <div className="relative bg-slate-200 mx-auto w-[80%] aspect-[7/8] hidden md:block ">
         <Image
-          src="/images/Sagar.jpeg"
+          src="/images/hero.png"
           width={300}
           height={300}
-          className=" w-full h-full object-cover relative bottom-[8%] right-[8%]"
+          className=" w-full h-full object-cover relative bottom-[11.25%] right-[12.87%]"
         />  
       </div>
       <div className="relative bg-slate-200 mx-auto aspect-[1/1] md:hidden mb-16">
         <Image
-          src="/images/Sagar.jpeg"
+          src="/images/hero.png"
           width={300}
           height={300}
-          className=" w-[84%] h-full object-cover relative bottom-[8%] right-[8%] left-[8%]"
+          className=" w-[94%] h-full object-cover relative bottom-[4%] right-[3%] left-[3%]"
         />
       </div>
       
