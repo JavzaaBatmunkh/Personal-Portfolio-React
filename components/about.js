@@ -18,7 +18,7 @@ export function About({ info }) {
         
         
         
-        <div className="relative bg-slate-200 mx-auto w-[80%] aspect-[5/6] hidden md:block mb-14 mt-[10%]">
+        <div className="relative bg-slate-200 w-[80%] aspect-[5/6] hidden md:block mb-14 mt-[10%]">
         <Image
           src={picture}
           width={480}
