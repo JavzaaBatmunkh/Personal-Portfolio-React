@@ -71,23 +71,23 @@ export function CardProject() {
         ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
           key={project.title}
         >
-          <div className="bg-gray-50 dark:bg-[#111827] rounded-lg items-center justify-center pl-5 pr-5 pb-10 pt-10 md:flex-1">
+          <div className="bg-gray-50 dark:bg-[#111827] rounded-lg items-center justify-center md:p-12 p-8 md:flex-1">
             <Image src={project.imagePath} width={600} height={600} />
           </div>
 
-          <div className="light:bg-white items-center justify-center p-5 md:flex-1">
-            <div className="pb-10">
+          <div className="light:bg-white  md:p-12 p-8 md:flex-1 flex flex-col gap-6">
+            <div >
               <strong>{project.title}</strong>
             </div>
-            <div className="pr-10">{project.description}</div>
+            <div >{project.description}</div>
 
-            <div className="flex flex-wrap gap-2 mt-4 mb-4">
+            <div className="flex flex-wrap gap-2 ">
               {project.tags.map((tagName, index) => (
                 <Tag key={index} props={tagName} />
               ))}
             </div>
 
-            <Link className="pt-12 pb-20 " href={project.link}>
+            <Link href={project.link}>
             <GrShare />
             </Link>
           </div>
